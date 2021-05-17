@@ -30,8 +30,8 @@ ROH: Hercules Network of Ontologies, ASIO project - Documentation
 This documentation area includes the following files:
 - `0 - OntologyTutorial.pdf` - [PDF](https://herculescrue.github.io/ROH/0%20-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
 - `1- OntologyDocumentation.pdf` - [PDF](https://herculescrue.github.io/ROH/1-%20OntologyDocumentation.pdf) describing in tabular form, every entity modelled in ROH.
-- `2- CoberturaPreguntasCompetencia.pdf` - [PDF](https://herculescrue.github.io/GnossDeustoOnto/2-%20CoberturaPreguntasCompetencia.pdf) with [competence questions which have been assessed against ROH](https://herculescrue.github.io/GnossDeustoOnto/2-%20CoberturaPreguntasCompetencia.pdf).
-- `3- Ejecución de preguntas de competencia.md`	- [Link](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/validation-questions) to page to execute competency questions against ROH
+- `2- CoberturaPreguntasCompetencia.pdf` - [PDF](https://herculescrue.github.io/ROH/2-%20CoberturaPreguntasCompetencia.pdf) with competence questions which have been assessed against ROH.
+- `3- Ejecución de preguntas de competencia.md`	- [Link](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions) to page to execute competency questions against ROH
 - `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH
 - `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH
 - `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH
@@ -54,7 +54,7 @@ Notice that ROH network of ontologies is divided into 2 [main parts](https://git
 To incorporate [specific modules](https://github.com/HerculesCRUE/ROH/tree/main/roh/modules) to the ontology, it is enough to create a new ontology, import the required higher level ontology entities and create the new classes or properties needed. Both classes and properties can be integrated within the existing hierarchy in the imported ontology. Let's say, for example, that a new university (e.g. University of Castilla La-Mancha) wants to make use of ROH and needs to add a series of positions of its own through which to classify research technicians. To do this, you can import the core ontology, and under `vivo:Position`, in which the hierarchies for the typical university positions appear, create your own as subclasses.
 
 The automatically generated documentation, through the Widoco tool, for each ontological part is referenced below:
-- Widoco generated documentation for [ROH core module](https://herculescrue.github.io/GnossDeustoOnto/roh/)
+- Widoco generated documentation for [ROH core module](https://herculescrue.github.io/ROH/roh/)
 - Widoco generated documentation for [ROH vertical modules](https://herculescrue.github.io/GnossDeustoOnto/rohes/)
 
 The following table shows a summary of the reused ontologies together with their respective user licenses. All reused ontologies have been evaluated for compatibility with their
@@ -113,9 +113,9 @@ The process followed to design an ontology that models a Research Management Sys
 2. Selection and analysis of the main ontologies that model the academic environment. Including contrast with [CERIF - ERD](https://www.eurocris.org/Uploads/Web%20pages/CERIF-1.5/cerif.html) vocabulary, entity relationship diagram, since it is the standard information model for CRIS (Current Research Information System) systems.
 3.	Identification of the main entities and relationships to model the knowledge of the academic world. Fulfilling the requirements of of the ASIO project. 
 4.	Validation of the flexibility, completeness and integrity of the ROH ontology network through the following evaluations:
-  - Review the [questions/competency queries](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/2-%20CoberturaPreguntasCompetencia.pdf) of the network listed by the University of Murcia (UM) and implement as a [suite of SPARQL queries](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/validation-questions/sparql-query) to validate their compliance. As a result of this validation, some new data and object properties were added. 
+  - Review the [questions/competency queries](https://herculescrue.github.io/ROH/2-%20CoberturaPreguntasCompetencia.pdf) of the network listed by the University of Murcia (UM) and implement as a [suite of SPARQL queries](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query) to validate their compliance. As a result of this validation, some new data and object properties were added. 
   - Review datasets offered by the University of Murcia and check that their data can be modelled with the entities and properties defined within ROH. Extension and adaptation of ROH entities according to the determined needs. 
-  - [Mapping of FECYT CVN format data to the ROH ontology](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/cvn). Where there were unmodelled entities or relationships, they were included. Details of the mapping between CVN and ROH entities appear in the cvn/config folder.  
+  - [Mapping of FECYT CVN format data to the ROH ontology](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/src/cvn). Where there were unmodelled entities or relationships, they were included. Details of the mapping between CVN and ROH entities appear in the cvn/config folder.  
 5.	Continuous refinement validated by a Continous Integration (CI) process. A battery of regression tests regulate that new changes introduced continue to guarantee the quality of ROH, its flexibility and extensibility to accommodate new requirements. 
 
 
